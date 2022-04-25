@@ -1,0 +1,139 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 100 -T 0 -C 0.7 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     ch.txt
+Instances:    328
+Attributes:   10
+              Int'l Plan
+              VMail Plan
+              Day Mins
+              Day Calls
+              Eve Mins
+              Eve Calls
+              Night Mins
+              Night Calls
+              CustServ Calls
+              Churn?
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.55 (180 instances)
+Minimum metric <confidence>: 0.7
+Number of cycles performed: 9
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 9
+
+Size of set of large itemsets L(2): 24
+
+Size of set of large itemsets L(3): 22
+
+Size of set of large itemsets L(4): 6
+
+Best rules found:
+
+  1. CustServ Calls=low 302 ==> Day Mins=high 302    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  2. Int'l Plan=no 281 ==> Day Mins=high 281    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  3. Day Calls=medium 262 ==> Day Mins=high 262    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  4. Int'l Plan=no CustServ Calls=low 256 ==> Day Mins=high 256    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  5. Day Calls=medium CustServ Calls=low 246 ==> Day Mins=high 246    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  6. VMail Plan=no 245 ==> Day Mins=high 245    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  7. Eve Mins=medium 243 ==> Day Mins=high 243    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  8. Eve Calls=medium 228 ==> Day Mins=high 228    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+  9. VMail Plan=no CustServ Calls=low 227 ==> Day Mins=high 227    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 10. Eve Mins=medium CustServ Calls=low 227 ==> Day Mins=high 227    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 11. Int'l Plan=no Day Calls=medium 225 ==> Day Mins=high 225    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 12. Night Calls=medium 222 ==> Day Mins=high 222    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 13. Int'l Plan=no Eve Mins=medium 210 ==> Day Mins=high 210    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 14. Eve Calls=medium CustServ Calls=low 210 ==> Day Mins=high 210    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 15. Int'l Plan=no Day Calls=medium CustServ Calls=low 210 ==> Day Mins=high 210    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 16. Int'l Plan=no VMail Plan=no 209 ==> Day Mins=high 209    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 17. Night Mins=medium 206 ==> Day Mins=high 206    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 18. Night Calls=medium CustServ Calls=low 206 ==> Day Mins=high 206    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 19. Int'l Plan=no Eve Calls=medium 197 ==> Day Mins=high 197    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 20. Int'l Plan=no Eve Mins=medium CustServ Calls=low 195 ==> Day Mins=high 195    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 21. Day Calls=medium Eve Mins=medium 194 ==> Day Mins=high 194    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 22. VMail Plan=no Day Calls=medium 193 ==> Day Mins=high 193    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 23. Int'l Plan=no Night Calls=medium 191 ==> Day Mins=high 191    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 24. Int'l Plan=no VMail Plan=no CustServ Calls=low 191 ==> Day Mins=high 191    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 25. Night Mins=medium CustServ Calls=low 190 ==> Day Mins=high 190    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 26. VMail Plan=no Day Calls=medium CustServ Calls=low 183 ==> Day Mins=high 183    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 27. Int'l Plan=no Night Mins=medium 182 ==> Day Mins=high 182    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 28. Day Calls=medium Eve Calls=medium 182 ==> Day Mins=high 182    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 29. Day Calls=medium Eve Mins=medium CustServ Calls=low 182 ==> Day Mins=high 182    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 30. Int'l Plan=no Eve Calls=medium CustServ Calls=low 180 ==> Day Mins=high 180    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 31. VMail Plan=no Day Calls=medium 193 ==> CustServ Calls=low 183    <conf:(0.95)> lift:(1.03) lev:(0.02) [5] conv:(1.39)
+ 32. VMail Plan=no Day Mins=high Day Calls=medium 193 ==> CustServ Calls=low 183    <conf:(0.95)> lift:(1.03) lev:(0.02) [5] conv:(1.39)
+ 33. VMail Plan=no Day Calls=medium 193 ==> Day Mins=high CustServ Calls=low 183    <conf:(0.95)> lift:(1.03) lev:(0.02) [5] conv:(1.39)
+ 34. Day Calls=medium 262 ==> CustServ Calls=low 246    <conf:(0.94)> lift:(1.02) lev:(0.01) [4] conv:(1.22)
+ 35. Day Mins=high Day Calls=medium 262 ==> CustServ Calls=low 246    <conf:(0.94)> lift:(1.02) lev:(0.01) [4] conv:(1.22)
+ 36. Day Calls=medium 262 ==> Day Mins=high CustServ Calls=low 246    <conf:(0.94)> lift:(1.02) lev:(0.01) [4] conv:(1.22)
+ 37. Day Calls=medium Eve Mins=medium 194 ==> CustServ Calls=low 182    <conf:(0.94)> lift:(1.02) lev:(0.01) [3] conv:(1.18)
+ 38. Day Mins=high Day Calls=medium Eve Mins=medium 194 ==> CustServ Calls=low 182    <conf:(0.94)> lift:(1.02) lev:(0.01) [3] conv:(1.18)
+ 39. Day Calls=medium Eve Mins=medium 194 ==> Day Mins=high CustServ Calls=low 182    <conf:(0.94)> lift:(1.02) lev:(0.01) [3] conv:(1.18)
+ 40. Eve Mins=medium 243 ==> CustServ Calls=low 227    <conf:(0.93)> lift:(1.01) lev:(0.01) [3] conv:(1.13)
+ 41. Day Mins=high Eve Mins=medium 243 ==> CustServ Calls=low 227    <conf:(0.93)> lift:(1.01) lev:(0.01) [3] conv:(1.13)
+ 42. Eve Mins=medium 243 ==> Day Mins=high CustServ Calls=low 227    <conf:(0.93)> lift:(1.01) lev:(0.01) [3] conv:(1.13)
+ 43. Int'l Plan=no Day Calls=medium 225 ==> CustServ Calls=low 210    <conf:(0.93)> lift:(1.01) lev:(0.01) [2] conv:(1.11)
+ 44. Int'l Plan=no Day Mins=high Day Calls=medium 225 ==> CustServ Calls=low 210    <conf:(0.93)> lift:(1.01) lev:(0.01) [2] conv:(1.11)
+ 45. Int'l Plan=no Day Calls=medium 225 ==> Day Mins=high CustServ Calls=low 210    <conf:(0.93)> lift:(1.01) lev:(0.01) [2] conv:(1.11)
+ 46. Int'l Plan=no Eve Mins=medium 210 ==> CustServ Calls=low 195    <conf:(0.93)> lift:(1.01) lev:(0.01) [1] conv:(1.04)
+ 47. Int'l Plan=no Day Mins=high Eve Mins=medium 210 ==> CustServ Calls=low 195    <conf:(0.93)> lift:(1.01) lev:(0.01) [1] conv:(1.04)
+ 48. Int'l Plan=no Eve Mins=medium 210 ==> Day Mins=high CustServ Calls=low 195    <conf:(0.93)> lift:(1.01) lev:(0.01) [1] conv:(1.04)
+ 49. Night Calls=medium 222 ==> CustServ Calls=low 206    <conf:(0.93)> lift:(1.01) lev:(0) [1] conv:(1.04)
+ 50. Day Mins=high Night Calls=medium 222 ==> CustServ Calls=low 206    <conf:(0.93)> lift:(1.01) lev:(0) [1] conv:(1.04)
+ 51. Night Calls=medium 222 ==> Day Mins=high CustServ Calls=low 206    <conf:(0.93)> lift:(1.01) lev:(0) [1] conv:(1.04)
+ 52. VMail Plan=no 245 ==> CustServ Calls=low 227    <conf:(0.93)> lift:(1.01) lev:(0) [1] conv:(1.02)
+ 53. VMail Plan=no Day Mins=high 245 ==> CustServ Calls=low 227    <conf:(0.93)> lift:(1.01) lev:(0) [1] conv:(1.02)
+ 54. VMail Plan=no 245 ==> Day Mins=high CustServ Calls=low 227    <conf:(0.93)> lift:(1.01) lev:(0) [1] conv:(1.02)
+ 55. Night Mins=medium 206 ==> CustServ Calls=low 190    <conf:(0.92)> lift:(1) lev:(0) [0] conv:(0.96)
+ 56. Day Mins=high Night Mins=medium 206 ==> CustServ Calls=low 190    <conf:(0.92)> lift:(1) lev:(0) [0] conv:(0.96)
+ 57. Night Mins=medium 206 ==> Day Mins=high CustServ Calls=low 190    <conf:(0.92)> lift:(1) lev:(0) [0] conv:(0.96)
+ 58. Eve Calls=medium 228 ==> CustServ Calls=low 210    <conf:(0.92)> lift:(1) lev:(0) [0] conv:(0.95)
+ 59. Day Mins=high Eve Calls=medium 228 ==> CustServ Calls=low 210    <conf:(0.92)> lift:(1) lev:(0) [0] conv:(0.95)
+ 60. Eve Calls=medium 228 ==> Day Mins=high CustServ Calls=low 210    <conf:(0.92)> lift:(1) lev:(0) [0] conv:(0.95)
+ 61. Day Mins=high 328 ==> CustServ Calls=low 302    <conf:(0.92)> lift:(1) lev:(0) [0] conv:(0.96)
+ 62. Int'l Plan=no VMail Plan=no 209 ==> CustServ Calls=low 191    <conf:(0.91)> lift:(0.99) lev:(-0) [-1] conv:(0.87)
+ 63. Int'l Plan=no VMail Plan=no Day Mins=high 209 ==> CustServ Calls=low 191    <conf:(0.91)> lift:(0.99) lev:(-0) [-1] conv:(0.87)
+ 64. Int'l Plan=no VMail Plan=no 209 ==> Day Mins=high CustServ Calls=low 191    <conf:(0.91)> lift:(0.99) lev:(-0) [-1] conv:(0.87)
+ 65. Int'l Plan=no Eve Calls=medium 197 ==> CustServ Calls=low 180    <conf:(0.91)> lift:(0.99) lev:(-0) [-1] conv:(0.87)
+ 66. Int'l Plan=no Day Mins=high Eve Calls=medium 197 ==> CustServ Calls=low 180    <conf:(0.91)> lift:(0.99) lev:(-0) [-1] conv:(0.87)
+ 67. Int'l Plan=no Eve Calls=medium 197 ==> Day Mins=high CustServ Calls=low 180    <conf:(0.91)> lift:(0.99) lev:(-0) [-1] conv:(0.87)
+ 68. Int'l Plan=no 281 ==> CustServ Calls=low 256    <conf:(0.91)> lift:(0.99) lev:(-0.01) [-2] conv:(0.86)
+ 69. Int'l Plan=no Day Mins=high 281 ==> CustServ Calls=low 256    <conf:(0.91)> lift:(0.99) lev:(-0.01) [-2] conv:(0.86)
+ 70. Int'l Plan=no 281 ==> Day Mins=high CustServ Calls=low 256    <conf:(0.91)> lift:(0.99) lev:(-0.01) [-2] conv:(0.86)
+ 71. Night Mins=medium 206 ==> Int'l Plan=no 182    <conf:(0.88)> lift:(1.03) lev:(0.02) [5] conv:(1.18)
+ 72. Day Mins=high Night Mins=medium 206 ==> Int'l Plan=no 182    <conf:(0.88)> lift:(1.03) lev:(0.02) [5] conv:(1.18)
+ 73. Night Mins=medium 206 ==> Int'l Plan=no Day Mins=high 182    <conf:(0.88)> lift:(1.03) lev:(0.02) [5] conv:(1.18)
+ 74. Eve Mins=medium 243 ==> Int'l Plan=no 210    <conf:(0.86)> lift:(1.01) lev:(0.01) [1] conv:(1.02)
+ 75. Day Mins=high Eve Mins=medium 243 ==> Int'l Plan=no 210    <conf:(0.86)> lift:(1.01) lev:(0.01) [1] conv:(1.02)
+ 76. Eve Mins=medium 243 ==> Int'l Plan=no Day Mins=high 210    <conf:(0.86)> lift:(1.01) lev:(0.01) [1] conv:(1.02)
+ 77. Eve Calls=medium 228 ==> Int'l Plan=no 197    <conf:(0.86)> lift:(1.01) lev:(0.01) [1] conv:(1.02)
+ 78. Day Mins=high Eve Calls=medium 228 ==> Int'l Plan=no 197    <conf:(0.86)> lift:(1.01) lev:(0.01) [1] conv:(1.02)
+ 79. Eve Calls=medium 228 ==> Int'l Plan=no Day Mins=high 197    <conf:(0.86)> lift:(1.01) lev:(0.01) [1] conv:(1.02)
+ 80. Night Calls=medium 222 ==> Int'l Plan=no 191    <conf:(0.86)> lift:(1) lev:(0) [0] conv:(0.99)
+ 81. Day Mins=high Night Calls=medium 222 ==> Int'l Plan=no 191    <conf:(0.86)> lift:(1) lev:(0) [0] conv:(0.99)
+ 82. Night Calls=medium 222 ==> Int'l Plan=no Day Mins=high 191    <conf:(0.86)> lift:(1) lev:(0) [0] conv:(0.99)
+ 83. Eve Mins=medium CustServ Calls=low 227 ==> Int'l Plan=no 195    <conf:(0.86)> lift:(1) lev:(0) [0] conv:(0.99)
+ 84. Day Mins=high Eve Mins=medium CustServ Calls=low 227 ==> Int'l Plan=no 195    <conf:(0.86)> lift:(1) lev:(0) [0] conv:(0.99)
+ 85. Eve Mins=medium CustServ Calls=low 227 ==> Int'l Plan=no Day Mins=high 195    <conf:(0.86)> lift:(1) lev:(0) [0] conv:(0.99)
+ 86. Day Calls=medium 262 ==> Int'l Plan=no 225    <conf:(0.86)> lift:(1) lev:(0) [0] conv:(0.99)
+ 87. Day Mins=high Day Calls=medium 262 ==> Int'l Plan=no 225    <conf:(0.86)> lift:(1) lev:(0) [0] conv:(0.99)
+ 88. Day Calls=medium 262 ==> Int'l Plan=no Day Mins=high 225    <conf:(0.86)> lift:(1) lev:(0) [0] conv:(0.99)
+ 89. Eve Calls=medium CustServ Calls=low 210 ==> Int'l Plan=no 180    <conf:(0.86)> lift:(1) lev:(0) [0] conv:(0.97)
+ 90. Day Mins=high Eve Calls=medium CustServ Calls=low 210 ==> Int'l Plan=no 180    <conf:(0.86)> lift:(1) lev:(0) [0] conv:(0.97)
+ 91. Eve Calls=medium CustServ Calls=low 210 ==> Int'l Plan=no Day Mins=high 180    <conf:(0.86)> lift:(1) lev:(0) [0] conv:(0.97)
+ 92. Day Mins=high 328 ==> Int'l Plan=no 281    <conf:(0.86)> lift:(1) lev:(0) [0] conv:(0.98)
+ 93. Day Calls=medium CustServ Calls=low 246 ==> Int'l Plan=no 210    <conf:(0.85)> lift:(1) lev:(-0) [0] conv:(0.95)
+ 94. Day Mins=high Day Calls=medium CustServ Calls=low 246 ==> Int'l Plan=no 210    <conf:(0.85)> lift:(1) lev:(-0) [0] conv:(0.95)
+ 95. Day Calls=medium CustServ Calls=low 246 ==> Int'l Plan=no Day Mins=high 210    <conf:(0.85)> lift:(1) lev:(-0) [0] conv:(0.95)
+ 96. VMail Plan=no 245 ==> Int'l Plan=no 209    <conf:(0.85)> lift:(1) lev:(-0) [0] conv:(0.95)
+ 97. VMail Plan=no Day Mins=high 245 ==> Int'l Plan=no 209    <conf:(0.85)> lift:(1) lev:(-0) [0] conv:(0.95)
+ 98. VMail Plan=no 245 ==> Int'l Plan=no Day Mins=high 209    <conf:(0.85)> lift:(1) lev:(-0) [0] conv:(0.95)
+ 99. CustServ Calls=low 302 ==> Int'l Plan=no 256    <conf:(0.85)> lift:(0.99) lev:(-0.01) [-2] conv:(0.92)
+100. Day Mins=high CustServ Calls=low 302 ==> Int'l Plan=no 256    <conf:(0.85)> lift:(0.99) lev:(-0.01) [-2] conv:(0.92)
+

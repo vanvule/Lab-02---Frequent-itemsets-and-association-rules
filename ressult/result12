@@ -1,0 +1,93 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 50 -T 0 -C 0.6 -D 0.05 -U 1.0 -M 0.2 -S -1.0 -A -c -1
+Relation:     ch.txt
+Instances:    328
+Attributes:   10
+              Int'l Plan
+              VMail Plan
+              Day Mins
+              Day Calls
+              Eve Mins
+              Eve Calls
+              Night Mins
+              Night Calls
+              CustServ Calls
+              Churn?
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.2 (66 instances)
+Minimum metric <confidence>: 0.6
+Number of cycles performed: 16
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 19
+
+Size of set of large itemsets L(2): 73
+
+Size of set of large itemsets L(3): 123
+
+Size of set of large itemsets L(4): 97
+
+Size of set of large itemsets L(5): 31
+
+Size of set of large itemsets L(6): 1
+
+Best rules found:
+
+ 1. Int'l Plan=no VMail Plan=yes 72 ==> Churn?=False. 71    conf:(0.99)
+ 2. Int'l Plan=no VMail Plan=yes Day Mins=high 72 ==> Churn?=False. 71    conf:(0.99)
+ 3. VMail Plan=yes CustServ Calls=low 75 ==> Churn?=False. 69    conf:(0.92)
+ 4. VMail Plan=yes Day Mins=high CustServ Calls=low 75 ==> Churn?=False. 69    conf:(0.92)
+ 5. VMail Plan=yes 83 ==> Churn?=False. 76    conf:(0.92)
+ 6. VMail Plan=yes Day Mins=high 83 ==> Churn?=False. 76    conf:(0.92)
+ 7. Int'l Plan=no VMail Plan=no Eve Mins=medium Night Calls=medium 104 ==> Churn?=True. 66    conf:(0.63)
+ 8. VMail Plan=no Eve Calls=medium Night Calls=medium CustServ Calls=low 104 ==> Churn?=True. 66    conf:(0.63)
+ 9. Int'l Plan=no VMail Plan=no Day Mins=high Eve Mins=medium Night Calls=medium 104 ==> Churn?=True. 66    conf:(0.63)
+10. VMail Plan=no Day Mins=high Eve Calls=medium Night Calls=medium CustServ Calls=low 104 ==> Churn?=True. 66    conf:(0.63)
+11. Int'l Plan=no VMail Plan=no Night Mins=medium CustServ Calls=low 125 ==> Churn?=True. 79    conf:(0.63)
+12. Int'l Plan=no VMail Plan=no Day Mins=high Night Mins=medium CustServ Calls=low 125 ==> Churn?=True. 79    conf:(0.63)
+13. Int'l Plan=no VMail Plan=no Eve Mins=medium CustServ Calls=low 144 ==> Churn?=True. 91    conf:(0.63)
+14. Int'l Plan=no VMail Plan=no Day Mins=high Eve Mins=medium CustServ Calls=low 144 ==> Churn?=True. 91    conf:(0.63)
+15. VMail Plan=no Eve Calls=medium Night Calls=medium 111 ==> Churn?=True. 70    conf:(0.63)
+16. VMail Plan=no Day Mins=high Eve Calls=medium Night Calls=medium 111 ==> Churn?=True. 70    conf:(0.63)
+17. Int'l Plan=no VMail Plan=no Eve Mins=medium 153 ==> Churn?=True. 96    conf:(0.63)
+18. Int'l Plan=no VMail Plan=no Day Mins=high Eve Mins=medium 153 ==> Churn?=True. 96    conf:(0.63)
+19. Int'l Plan=no VMail Plan=no Day Calls=medium Eve Mins=medium CustServ Calls=low 112 ==> Churn?=True. 70    conf:(0.63)
+20. Int'l Plan=no VMail Plan=no Day Mins=high Day Calls=medium Eve Mins=medium CustServ Calls=low 112 ==> Churn?=True. 70    conf:(0.63)
+21. Int'l Plan=no VMail Plan=no Night Mins=medium 138 ==> Churn?=True. 86    conf:(0.62)
+22. Int'l Plan=no VMail Plan=no Day Mins=high Night Mins=medium 138 ==> Churn?=True. 86    conf:(0.62)
+23. VMail Plan=no Eve Mins=medium Night Calls=medium 119 ==> Churn?=True. 74    conf:(0.62)
+24. VMail Plan=no Day Mins=high Eve Mins=medium Night Calls=medium 119 ==> Churn?=True. 74    conf:(0.62)
+25. Int'l Plan=no VMail Plan=no Eve Calls=medium CustServ Calls=low 132 ==> Churn?=True. 82    conf:(0.62)
+26. Int'l Plan=no VMail Plan=no Day Mins=high Eve Calls=medium CustServ Calls=low 132 ==> Churn?=True. 82    conf:(0.62)
+27. Int'l Plan=no VMail Plan=no Eve Calls=medium 142 ==> Churn?=True. 88    conf:(0.62)
+28. Int'l Plan=no VMail Plan=no Day Mins=high Eve Calls=medium 142 ==> Churn?=True. 88    conf:(0.62)
+29. VMail Plan=no Eve Mins=medium Night Calls=medium CustServ Calls=low 113 ==> Churn?=True. 70    conf:(0.62)
+30. VMail Plan=no Day Mins=high Eve Mins=medium Night Calls=medium CustServ Calls=low 113 ==> Churn?=True. 70    conf:(0.62)
+31. Int'l Plan=no VMail Plan=no Day Calls=medium Eve Mins=medium 118 ==> Churn?=True. 73    conf:(0.62)
+32. Int'l Plan=no VMail Plan=no Day Mins=high Day Calls=medium Eve Mins=medium 118 ==> Churn?=True. 73    conf:(0.62)
+33. VMail Plan=no Night Mins=medium CustServ Calls=low 144 ==> Churn?=True. 89    conf:(0.62)
+34. VMail Plan=no Day Mins=high Night Mins=medium CustServ Calls=low 144 ==> Churn?=True. 89    conf:(0.62)
+35. VMail Plan=no Eve Calls=medium Night Mins=medium 107 ==> Churn?=True. 66    conf:(0.62)
+36. Int'l Plan=no VMail Plan=no Eve Mins=medium Eve Calls=medium 107 ==> Churn?=True. 66    conf:(0.62)
+37. VMail Plan=no Day Mins=high Eve Calls=medium Night Mins=medium 107 ==> Churn?=True. 66    conf:(0.62)
+38. Int'l Plan=no VMail Plan=no Day Mins=high Eve Mins=medium Eve Calls=medium 107 ==> Churn?=True. 66    conf:(0.62)
+39. VMail Plan=no Night Calls=medium CustServ Calls=low 151 ==> Churn?=True. 93    conf:(0.62)
+40. VMail Plan=no Day Mins=high Night Calls=medium CustServ Calls=low 151 ==> Churn?=True. 93    conf:(0.62)
+41. VMail Plan=no Night Calls=medium 164 ==> Churn?=True. 101    conf:(0.62)
+42. VMail Plan=no Day Mins=high Night Calls=medium 164 ==> Churn?=True. 101    conf:(0.62)
+43. VMail Plan=no Eve Mins=medium Night Mins=medium 109 ==> Churn?=True. 67    conf:(0.61)
+44. VMail Plan=no Day Mins=high Eve Mins=medium Night Mins=medium 109 ==> Churn?=True. 67    conf:(0.61)
+45. Int'l Plan=no VMail Plan=no Night Calls=medium 140 ==> Churn?=True. 86    conf:(0.61)
+46. Int'l Plan=no VMail Plan=no Day Mins=high Night Calls=medium 140 ==> Churn?=True. 86    conf:(0.61)
+47. Int'l Plan=no VMail Plan=no Night Calls=medium CustServ Calls=low 127 ==> Churn?=True. 78    conf:(0.61)
+48. Int'l Plan=no VMail Plan=no Day Mins=high Night Calls=medium CustServ Calls=low 127 ==> Churn?=True. 78    conf:(0.61)
+49. VMail Plan=no Night Mins=medium 157 ==> Churn?=True. 96    conf:(0.61)
+50. VMail Plan=no Day Mins=high Night Mins=medium 157 ==> Churn?=True. 96    conf:(0.61)
+

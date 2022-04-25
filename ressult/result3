@@ -1,0 +1,49 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 75 -T 0 -C 0.8 -D 0.05 -U 1.0 -M 0.2 -S -1.0 -A -c -1
+Relation:     ch.txt
+Instances:    328
+Attributes:   10
+              Int'l Plan
+              VMail Plan
+              Day Mins
+              Day Calls
+              Eve Mins
+              Eve Calls
+              Night Mins
+              Night Calls
+              CustServ Calls
+              Churn?
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.2 (66 instances)
+Minimum metric <confidence>: 0.8
+Number of cycles performed: 16
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 19
+
+Size of set of large itemsets L(2): 73
+
+Size of set of large itemsets L(3): 123
+
+Size of set of large itemsets L(4): 97
+
+Size of set of large itemsets L(5): 31
+
+Size of set of large itemsets L(6): 1
+
+Best rules found:
+
+ 1. Int'l Plan=no VMail Plan=yes 72 ==> Churn?=False. 71    conf:(0.99)
+ 2. Int'l Plan=no VMail Plan=yes Day Mins=high 72 ==> Churn?=False. 71    conf:(0.99)
+ 3. VMail Plan=yes CustServ Calls=low 75 ==> Churn?=False. 69    conf:(0.92)
+ 4. VMail Plan=yes Day Mins=high CustServ Calls=low 75 ==> Churn?=False. 69    conf:(0.92)
+ 5. VMail Plan=yes 83 ==> Churn?=False. 76    conf:(0.92)
+ 6. VMail Plan=yes Day Mins=high 83 ==> Churn?=False. 76    conf:(0.92)
+
